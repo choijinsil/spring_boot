@@ -2,6 +2,10 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,12 +24,12 @@ stereotype 어노테이션이라고 한다.
 위 두개는 Spring MVC에서 온 어노테이션이다.
 */
 @RestController
-@EnableAutoConfiguration
+@SpringBootApplication()
 public class Example {
 
 	@RequestMapping("/")
 	String home() {
-		return "hello world!";
+		return "hello siri!";
 	}
 
 	public static void main(String[] args) {
